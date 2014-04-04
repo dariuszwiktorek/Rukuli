@@ -20,6 +20,13 @@ module Rukuli
       @java_obj.type(nil, text, modifier)
     end
 
+    # Public: Press escape
+    #
+    # Returns nothing
+    def escape()
+        @java_obj.type(Sikuli::KEY_ESC)
+    end
+
     # Public: Types text then presses the return/enter key on the keyboard
     #
     # text - String
