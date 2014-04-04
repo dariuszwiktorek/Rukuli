@@ -20,6 +20,12 @@ describe Rukuli::Region, "#Typeable" do
     it "types and presses enter" do
       @region.enter("this should be followed by the enter key")
     end
+
+    it "presses the escape key to exit save dialog" do
+      @region.type("s", Rukuli::KEY_CMD)
+      sleep 2
+      @region.escape()
+    end
   end
 
   context "unicode characters" do
