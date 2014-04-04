@@ -16,6 +16,12 @@ describe Rukuli::Region, "#Typeable" do
       @region.type("this should be lower case")
       @region.type("this should be upper case", Rukuli::KEY_SHIFT)
     end
+
+    it "presses the escape key to exit save dialog" do
+      @region.type("s", Rukuli::KEY_CMD)
+      sleep 2
+      @region.escape()
+    end
   end
 
   context "unicode characters" do

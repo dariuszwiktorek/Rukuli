@@ -24,7 +24,7 @@ module Rukuli
     #
     # Returns nothing
     def escape()
-        @java_obj.type(Sikuli::KEY_ESC)
+        @java_obj.type(Rukuli::KEY_ESC)
     end
 
     # Public: Types text then presses the return/enter key on the keyboard
