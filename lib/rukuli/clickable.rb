@@ -44,6 +44,11 @@ module Rukuli
       end
     end
 
+    def click_offset(img, x, y)
+        region = @java_obj.find(img)
+        @java_obj.click(region.getX() + x, region.getY() + y)
+    end
+
     # Public: Performs a click and hold on an image match or point (x, y)
     #
     # args - String representing filename of image to find and click
