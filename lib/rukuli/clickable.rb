@@ -46,6 +46,11 @@ module Rukuli
 
     def click_offset(img, x, y)
         region = @java_obj.find(img)
+
+        puts region
+        puts region.getX
+        puts region.getY
+
         @java_obj.click(region.getX() + x, region.getY() + y)
     end
 
