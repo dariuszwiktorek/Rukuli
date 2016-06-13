@@ -44,6 +44,21 @@ module Rukuli
         org.sikuli.basics::Settings.DebugLogs  = boolean
       end
 
+      # Public: turns text recognition (OCR) functionality of Sikuli on and off
+      # by changing the Sikuli settings in the Settings java class.
+      # Defaults to true.
+      #
+      # Examples
+      #
+      #  Rukuli::Config.text_recognition = false
+      #
+      # Returns nothing
+      def text_recognition(boolean)
+        return unless [TrueClass, FalseClass].include? boolean.class
+        org.sikuli.basics::Settings.OcrTextRead  = boolean #for use of the Region.text()
+        org.sikuli.basics::Settings.OcrTextSearch = boolean #for finding text with find("some text")
+      end
+
       # Public: convienence method for grouping the setting of config
       # variables
       #

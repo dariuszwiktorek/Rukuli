@@ -1,5 +1,7 @@
-.DS_Store
 *.gem
+.DS_Store
 .bundle
+.idea
+Rukuli.iml
 Gemfile.lock
 pkg/*
